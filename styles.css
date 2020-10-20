@@ -1,0 +1,289 @@
+body{
+  background-color: darkgray; /*sätter bakgrund som ska ligga på vartannat block (för lathetens skull)*/
+  margin: 0;
+  padding: 0;
+}
+
+/* Styling av headern, med tillhörande delar (bild på mig samt meny och dropdown för portfolio), startar här */
+
+.header{
+  background-color: black;
+  width: 100%;
+  z-index: 1; /*ser till att headern alltid är längst fram*/
+}
+
+.header__martinrund--bild-martin{
+    width: 5%;
+    padding-left: 5%;
+}
+
+.header__nav {
+    display: flex; /*Gör flex*/
+    flex-direction: row; /*Ställer upp flex på rad*/
+    justify-content: space-between; /*placerar menyn på avstånd till bilden, längst till höger*/
+    align-items: center; /*Hjälper till att centrera bilden på mig */
+    padding: 0.5% 5% 0.5% 0.5%;
+  }
+
+  .header__ul {
+    display: flex;
+  }
+
+  .header__ul li {
+    list-style: none; /*Ta bort prickarna på listknapp*/
+    padding-left: 1.5em; /*Skapar mellanrum i rubrikerna för länkar*/
+    font-size: 1.5em;
+  }
+
+  .header__ul a:hover { /*Markering när man för muspekaren över länkarna*/
+  background-color: darkblue;
+  border-radius: 5px;
+  width: 100%; /*Måste även lägga till detta för att få markering på hela raden*/
+  display: flex; /*för att behålla flex vid hover*/
+  justify-content: center;
+  align-items: center; /*Måste även lägga till detta för att få markering på hela raden*/
+  }
+
+  .header__ul li a {
+    color: #ced7dd; /*Gör vit färg på texten i menyn*/
+    text-decoration: none; /*Ta bort underline i texten (menyn)*/
+  }
+
+/* Här startar styling av dropdown meny */
+ul.header__dropdown {
+  padding: 0.5%; /*ta bort padding främst till vänster*/
+  background: black;
+  font-size: 60%;
+  border-radius: 5px;
+  visibility: hidden;
+  opacity: 0; /*för att dölja undermenyn*/
+  position: absolute;
+  transition: all 0.5s ease; /*mjuk öppning av menyn*/
+  margin-top: 1.2rem; /*ta kanske bort*/
+}
+
+ul.header__dropdown li{
+  padding: 0 0 20% 0; /*mellanrum i dropdownlänkar*/
+}
+
+ul li:hover > ul, ul li ul:hover {
+  visibility: visible;
+  opacity: 1;
+}
+/* Här slutar styiling av dropdown meny */
+
+/* Här startar styling av inledning, stylingen talar sitt tydliga språk */
+  .inledning{
+    background-color: lightgray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10% 5%;
+  }
+
+  .inledning__logga--bild1{
+    width: 20%;
+  }
+
+  .inledning__hej{
+    text-align: center;
+    color: darkblue;
+    font-size: 1.5em;
+    font-family: 'Sansita Swashed', cursive; /*Google font*/
+  }
+
+  /* Här avslutas styling av inledning och startar styling av om mig. finns inte så mycket att kommentera nedan för att förtydliga */
+  .om-container{
+    background-color: darkgray;
+    text-align: center; 
+  }
+
+  .om-container h1{
+    margin: 0;
+    padding: 2% 0 5%;
+  }
+
+  .om-container__text-om-mig{
+      border: 2px solid black;
+      border-radius: 50px;
+      margin: 0 5%;
+      padding: 0 5%;
+      font-size: 1.5em;
+      text-align: justify;
+  }
+
+  .om-container__bilder {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; /*ställ upp bilderna i 4 rader*/
+    row-gap: 5%;
+    text-align: center;
+    padding-left: 0; /*ta bort padding vänster pga listpunkt*/
+    margin: 5% 0;
+}
+
+  .om-container__bilder li {
+    list-style: none;
+}
+
+  .om-container__bilder img{
+      list-style: none;
+      width: 60%;
+      border: 2px solid black;
+      border-radius: 50px;
+  }
+
+  /* Portfolio börjar här. Lägger inte in så många kommentarer pga stylingen visar vad jag gör. Dessutom stod det ingenting om kommentarer i uppgiften.*/
+  .portfolio-container{
+    background-color: lightgrey;
+    text-align: center;
+    }
+
+    .portfolio-container h1{
+      margin: 0;
+      padding: 2%;
+    }
+
+  .portfolio {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-left: 0; /*ta bort padding vänster pga listpunkt*/
+    padding-bottom: 5%;
+  }
+
+  .portfolio > div{
+    border: 1px solid black;
+    border-radius: 50px;
+    padding: 10% 0 5%;
+    margin: 5%;
+}
+
+.portfolio p{
+  padding: 0 15%;
+  text-align: justify;
+}
+
+.portfolio img {
+    width: 80%;
+}
+
+/* Här slutar styling av portfolio och kontaktdelen startar */
+
+  .kontakt-container{
+    text-align: center;
+    padding: 0 20% 5%;
+  }
+
+  .kontakt-container h1{
+    margin: 0;
+    padding: 3.333% 0 7%;
+  }
+
+  .form__kontakt-form {
+    display: flex;
+    flex-direction: column;
+  }
+
+.form{
+  margin: 0;
+  padding: 0;
+}
+.form input, .form textarea { /*visa att det ska hända saker i både input och textarea*/
+  border-radius: 5px; /*runda kanter på fält*/
+  margin-bottom: 2%; /*mellanrum mellan fält*/
+  font-size: 1.5em;
+  padding: 2%;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+/* Här slutar kontaktformulär */
+
+
+/* Här startar foten (sista delen av sidan).  */
+footer{
+  background-color: black;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  color: white;
+  width: 100%;
+  text-align: center;
+}
+
+.footer__copyright{
+  color: white;
+  border: 3px dotted white;
+  padding: 1%;
+  display: inline-block; 
+  border-radius: 40px;
+  font-size: 1.5em;
+  margin: 5% 0 10%;
+}
+
+.footer__ikoner {
+list-style: none; /*Ta bort prickarna på listknapp*/
+display: flex; /*Gör flex*/
+flex-direction: row; /*Ställer upp flex på rad*/
+text-align: center;
+padding: 0 0 5% 0;
+margin: 0;
+}
+
+.footer__ikoner img{
+  width: 20%;
+}
+
+/* Slut på foten */
+
+/* Nedanstående ställer in så att sidan blir responsiv i mob/padda */
+
+@media screen and (max-width: 749px){
+  .portfolio {
+    grid-template-columns: 1fr;
+  }
+
+    .inledning__hej{
+      max-width: 50%;
+    }
+
+    .om-container__bilder {
+      grid-template-columns: 1fr 1fr; /*ställ upp bilderna i 2 rader*/
+    }
+
+      .header__martinrund--bild-martin{
+        width: 10%;}
+}
+
+
+@media screen and (max-width: 505px){
+  .portfolio {
+    grid-template-columns: 1fr;}
+
+    .inledning__hej{
+      max-width: 75%;}
+
+    .om-container__bilder {
+      grid-template-columns: 1fr 1fr; /*ställ upp bilderna i 2 rader*/}
+
+      .header__martinrund--bild-martin{
+        width: 25%;
+      }
+
+      .header__ul {
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100px;}
+
+            ul.header__dropdown {
+              pointer-events: none; /*Tar bort möjligheten att råka klicka sig vidare i mindre skärm*/
+            }
+
+ul li:hover > ul, ul li ul:hover {
+  opacity: 0; /*Onödigt att ha undermeny när det är så smal skärm*/
+}
+
+.om-container__text-om-mig{
+  text-align: left;
+}
+
+
+
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&display=swap" rel="stylesheet">
+    <!-- google font -->
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+</head>
+<body>
+
+    <!-- header börjar här, denna innehåller bild på mig, meny - inklusive dropdown för portfolio -->
+        <header class="header">
+
+            <nav class="header__nav">
+              <img class="header__martinrund--bild-martin" src="img/martinrund.png" alt="bild på Martin">
+              <ul class="header__ul">
+                <li><a href="#om-link">Om mig</a></li>
+                <li><a href="#portfolio-link">Portfolio</a>
+                    <ul class="header__dropdown">
+                        <li><a href="#proj1">Projekt 1</a></li>
+                        <li><a href="#proj2">Projekt 2</a></li>
+                        <li><a href="#proj3">Projekt 3</a></li>
+                        <li><a href="#proj4">Projekt 4</a></li>
+                    </ul>
+                </li>
+                <li><a href="#kontakt-link">Kontakt</a></li>
+              </ul>
+            </nav>
+
+        </header>
+    </div>
+
+    <!-- Headern slutar här och sektion med inledning börjar här. Inledningen innehåller en logga till vänster, vilken såklart kan bytas ut, samt en presentationstext till höger - som såklart också kan bytas ut. -->
+
+    <div class="inledning">
+
+        <img class="inledning__logga--bild1" src="img/loggo.png" alt="bild på loggor">
+
+        
+        <div class="inledning__hej">
+            <h1>Hej,</h1>
+
+            <h2 class="inledning__hej--introtext">Mitt namn är Martin Harlenbäck</h2>
+
+        </div>
+
+    </div>
+
+
+    <div id="om-link" class="om-container">
+
+        <h1>Om mig</h1>
+        
+        <div class=om-container__text-om-mig>
+            <p class="om-container__text-om-mig--text">Mitt namn är Martin, är 37 år och bor i Häljarp tillsammans med min underbara sambo och söta lilla chihuahua. Jag har tidigare pluggat idrottsvetenskap och främst jobbat inom simidrotten. Håller just nu på att avsluta ett uppdrag som processledare i Lomma kommun, så kör dubbelt oktober ut. Hoppas kunna vara så aktiv som det bara går, men inte lika mycket som jag hade velat nu i början.
+                <br> <br><!-- dubbla radbyte-->
+            På fritiden umgås jag med min sambo, familj, vänner, gillar att simma och håller givetvis på Malmö FF!</p>
+            </div>
+
+        </div>
+
+
+        <ul class="om-container__bilder">
+            <li class="om-container__bilder--bild1"><img src="img/ommig/stina.jpg" alt="Bild på Stina"></li>
+            <li class="om-container__bilder--bild2"><img src="img/ommig/ulf.jpg" alt="Bild på Ulf"></li>
+            <li class="om-container__bilder--bild3"><img src="img/ommig/simning.jpg" alt="Bild på Simning"></li>
+            <li class="om-container__bilder--bild4"><img src="img/ommig/mff.jpg" alt="Bild på MFF"></li>
+        </ul>
+    </div>
+
+<!-- Här börjar portfolion. Kommentera inte så mycket eftersom det inte står att vi ska göra det i uppgiften. Koden är ganska simpel. -->
+
+    <div id="portfolio-link" class="portfolio-container">
+
+<h1>Portfolio</h1>
+
+<div class="portfolio">
+    <div id="proj1" class="portfolio__projekt1"><img src="img/portfolio/projekt1.jpg" alt="bild på projekt1"><p>Bildtext till projekt 1. Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque optio quam, repellat aliquam eos architecto debitis fugit neque sed explicabo.</p></div>
+    <div id="proj2" class="portfolio__projekt2"><img src="img/portfolio/projekt2.jpg" alt="bild på projekt2"><p>Bildtext till projekt 2. Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque optio quam, repellat aliquam eos architecto debitis fugit neque sed explicabo.</p></div>
+    <div id="proj3" class="portfolio__projekt3"><img src="img/portfolio/projekt3.jpg" alt="bild på projekt3"><p>Bildtext till projekt 3. Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque optio quam, repellat aliquam eos architecto debitis fugit neque sed explicabo.</p></div>
+    <div id="proj4" class="portfolio__projekt4"><img src="img/portfolio/projekt4.jpg" alt="bild på projekt4"><p>Bildtext till projekt 4. Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque optio quam, repellat aliquam eos architecto debitis fugit neque sed explicabo.</p></div>
+</div>
+       
+    </div>
+
+<!-- Här slutar portfolio -->
+
+<!-- Här startar kontaktformulär -->
+
+    <div id="kontakt-link" class="kontakt-container">
+
+        <h1>Kontakta mig</h1>
+
+        <div class="form">
+          
+          <form class="form__kontakt-form">
+
+          <input type="text" name="name" id="name" placeholder="Namn" required="">
+
+            <input type="email" name="email" id="email" placeholder="E-mail" required="">
+
+            <textarea name="message" id="message" rows="6" required="" placeholder="Meddelande"></textarea>
+
+            <input class="button submit-button" type="submit" value="SKICKA">
+
+          </form>
+        </div>
+      </div>
+
+    <footer class="footer">
+
+        <p class="footer__copyright">© Martin Harlenbäck</p>
+
+        <ul class="footer__ikoner">
+            <li><a href="#Facebook"><img src="img/symboler/facebook-2429746_640.png" alt="Ikon Facebook"></a></li>
+            <li><a href="#Google+"><img src="img/symboler/google-plus-940317_640.png" alt="Ikon Google+"></a></li>
+            <li><a href="#Instagram"><img src="img/symboler/instagram-2433265_640.png" alt="Ikon Instagram"></a></li>
+            <li><a href="#Twitter"><img src="img/symboler/twitter-2430933_640.png" alt="Ikon Twitter"></a></li>
+        </ul>
+
+    </footer>
+
+
+</body>
+</html>

@@ -215,7 +215,7 @@ footer{
   display: inline-block; 
   border-radius: 40px;
   font-size: 1.5em;
-  margin: 5% 0 10%;
+  margin: 5% 0 7.5%;
 }
 
 .footer__ikoner {
@@ -246,6 +246,7 @@ margin: 0;
 
     .om-container__bilder {
       grid-template-columns: 1fr 1fr; /*ställ upp bilderna i 2 rader*/
+      padding-bottom: 5%;
     }
 
       .header__martinrund--bild-martin{
@@ -254,15 +255,7 @@ margin: 0;
 
 
 @media screen and (max-width: 505px){
-  .portfolio {
-    grid-template-columns: 1fr;}
-
-    .inledning__hej{
-      max-width: 75%;}
-
-    .om-container__bilder {
-      grid-template-columns: 1fr 1fr; /*ställ upp bilderna i 2 rader*/}
-
+      
       .header__martinrund--bild-martin{
         width: 25%;
       }
@@ -270,20 +263,19 @@ margin: 0;
       .header__ul {
         flex-direction: column;
         justify-content: space-between;
-        height: 100px;}
+        height: 100px;
+      }
 
-            ul.header__dropdown {
-              pointer-events: none; /*Tar bort möjligheten att råka klicka sig vidare i mindre skärm*/
-            }
+      ul.header__dropdown {
+         pointer-events: none; /*Tar bort möjligheten att råka klicka sig vidare i mindre skärm*/
+      }
 
-ul li:hover > ul, ul li ul:hover {
-  opacity: 0; /*Onödigt att ha undermeny när det är så smal skärm*/
-}
+      ul li:hover > ul, ul li ul:hover {
+        opacity: 0; /*Onödigt att ha undermeny när det är så smal skärm*/
+      }
 
-.om-container__text-om-mig{
-  text-align: left;
-}
-
-
+      .om-container__text-om-mig{
+        text-align: left;
+      }
 
 }

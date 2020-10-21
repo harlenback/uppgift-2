@@ -1,5 +1,6 @@
 body{
   background-color: darkgray; /*sätter bakgrund som ska ligga på vartannat block (för lathetens skull)*/
+  font-family: 'Open Sans', sans-serif;
   margin: 0;
   padding: 0;
 }

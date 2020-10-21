@@ -3,6 +3,11 @@ body{
   font-family: 'Open Sans', sans-serif;
   margin: 0;
   padding: 0;
+  min-width: 280px; /*Minsta möjliga width anpassat responsivt till Galaxy Fold*/
+}
+
+.mobilmeny, .mobilmeny__links{
+  display:none;
 }
 
 /* Styling av headern, med tillhörande delar (bild på mig samt meny och dropdown för portfolio), startar här */
@@ -14,7 +19,7 @@ body{
 }
 
 .header__martinrund--bild-martin{
-    width: 5%;
+    width: 55px;
     padding-left: 5%;
 }
 
@@ -250,33 +255,57 @@ margin: 0;
       padding-bottom: 5%;
     }
 
-      .header__martinrund--bild-martin{
-        width: 10%;}
+
+@media screen and (max-width: 550px){
+
+ul.header__ul{
+  display:none;
 }
 
+.header__nav{
+  justify-content: center;
+}
 
-@media screen and (max-width: 505px){
-      
-      .header__martinrund--bild-martin{
-        width: 25%;
-      }
+.header__martinrund--bild-martin{
+  width: 100px;
+}
 
-      .header__ul {
-        flex-direction: column;
-        justify-content: space-between;
-        height: 100px;
-      }
+.mobilmeny{
+text-align: center;
+}
 
-      ul.header__dropdown {
-         pointer-events: none; /*Tar bort möjligheten att råka klicka sig vidare i mindre skärm*/
-      }
+.mobilmeny, .mobilmeny__links, .mobilmeny__links a{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background-color: black;
+  margin: 0;
+  padding: 3% 0 2%;
+  text-decoration: none;
+  color: white;
+  font-size: 1.2em;
+}
 
-      ul li:hover > ul, ul li ul:hover {
-        opacity: 0; /*Onödigt att ha undermeny när det är så smal skärm*/
-      }
+.mobilmeny__links a:hover {
+  background-color: darkblue;
+  border-radius: 5px;
+  }
 
-      .om-container__text-om-mig{
-        text-align: left;
-      }
+  .inledning {
+    justify-content: space-around;
+   }
+
+   .om-container__text-om-mig{
+    text-align: left;
+  }
+
+  
+
+}
+@media screen and (max-width: 280px){ /*Denna media screen gör att sidan även blir responsiv i Galaxy fold (som har 280px)*/
+
+  .inledning__hej{
+    font-size: 1em;
+  }
 
 }
